@@ -1,2 +1,6 @@
 # iOS_demo
-use Objective-C or Swift language
+### demo1_greeting
+
+- 添加Appicon
+- 添加LaunchImage
+- 修改App名称
