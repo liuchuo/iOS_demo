@@ -10,10 +10,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var nameField: UITextField!
+    
+    @IBOutlet weak var messageLabel: UILabel!
+    
+    @IBAction func greeting(_ sender: AnyObject) {
+        self.messageLabel.text = "你好呀，" + self.nameField.text! + "~很高兴认识你~"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        Thread.sleep(forTimeInterval: 3.0)
+        Thread.sleep(forTimeInterval: 1.0)
     }
 
     override func didReceiveMemoryWarning() {
