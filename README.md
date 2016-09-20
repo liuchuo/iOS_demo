@@ -24,3 +24,13 @@
 - 图片的切片，使用slicing切片边框
 - 添加pdf格式的矢量图片保证不失真
 - 使用一连串图片联合起来构成动画
+
+
+
+### demo3_storyboard
+
+- View Controller Scene之间的跳转
+- View Controller的返回 “unwindForSegue”和exit按钮
+- 重构（refactor）storyboard
+- Storyboard Reference的使用
+
