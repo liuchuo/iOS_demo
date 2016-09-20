@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "56FE5A621D8BA5D800E80BE1"
-               BuildableName = "demo1_greating.app"
-               BlueprintName = "demo1_greating"
-               ReferencedContainer = "container:demo1_greating.xcodeproj">
+               BlueprintIdentifier = "5605866D1D90C6F300611CDD"
+               BuildableName = "demo3_storyboard.app"
+               BlueprintName = "demo3_storyboard"
+               ReferencedContainer = "container:demo3_storyboard.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "56FE5A621D8BA5D800E80BE1"
-            BuildableName = "demo1_greating.app"
-            BlueprintName = "demo1_greating"
-            ReferencedContainer = "container:demo1_greating.xcodeproj">
+            BlueprintIdentifier = "5605866D1D90C6F300611CDD"
+            BuildableName = "demo3_storyboard.app"
+            BlueprintName = "demo3_storyboard"
+            ReferencedContainer = "container:demo3_storyboard.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -55,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "56FE5A621D8BA5D800E80BE1"
-            BuildableName = "demo1_greating.app"
-            BlueprintName = "demo1_greating"
-            ReferencedContainer = "container:demo1_greating.xcodeproj">
+            BlueprintIdentifier = "5605866D1D90C6F300611CDD"
+            BuildableName = "demo3_storyboard.app"
+            BlueprintName = "demo3_storyboard"
+            ReferencedContainer = "container:demo3_storyboard.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "56FE5A621D8BA5D800E80BE1"
-            BuildableName = "demo1_greating.app"
-            BlueprintName = "demo1_greating"
-            ReferencedContainer = "container:demo1_greating.xcodeproj">
+            BlueprintIdentifier = "5605866D1D90C6F300611CDD"
+            BuildableName = "demo3_storyboard.app"
+            BlueprintName = "demo3_storyboard"
+            ReferencedContainer = "container:demo3_storyboard.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

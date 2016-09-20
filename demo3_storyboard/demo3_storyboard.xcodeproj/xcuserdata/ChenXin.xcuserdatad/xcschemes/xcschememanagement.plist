@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>demo1_greating.xcscheme</key>
+		<key>demo3_storyboard.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>56FE5A621D8BA5D800E80BE1</key>
+		<key>5605866D1D90C6F300611CDD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
