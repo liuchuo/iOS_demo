@@ -162,8 +162,14 @@
                     </view>
                     <connections>
                         <outlet property="AliPayText" destination="agb-Sb-D1e" id="wuH-dA-Z1x"/>
+                        <outlet property="CreditCardText" destination="zMU-QK-PWb" id="qAm-oM-9IB"/>
+                        <outlet property="DebitCardAText" destination="I1l-bG-Mza" id="7VZ-d6-Ogo"/>
+                        <outlet property="DebitCardBText" destination="xIS-4b-afx" id="Pxe-tH-bh6"/>
+                        <outlet property="fenqiText" destination="Syx-0A-mdb" id="r0G-3B-sVc"/>
+                        <outlet property="huabeiText" destination="GI3-6y-6pb" id="OdJ-gA-qoA"/>
                         <outlet property="totalMoney" destination="5XO-hb-m0J" id="V94-X1-NMB"/>
                         <outlet property="xianjinText" destination="FC6-Uv-z9a" id="z6S-M7-D2R"/>
+                        <outlet property="zhenxiText" destination="A7r-VU-jlo" id="KL0-tm-LEe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
