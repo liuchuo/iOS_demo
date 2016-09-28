@@ -104,9 +104,6 @@ class ViewController: UIViewController {
         
         // total money label text
         totalMoney.text = String(totalInt)
-
-        print("Saved")
-    
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
