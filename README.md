@@ -65,4 +65,17 @@
 
 ### demo6_TableView
 
-- ​
+- 给ViewController添加一个Table View
+- Table View的DataSource、Delegate的绑定
+- 设置Section的行数：numberOfRowsInSection
+- 设置Section的个数：numberOfSectionInTableView
+- 设置每一个section的header和footer的颜色：viewForHeaderInSection、viewForFooterInSection
+- 使用RGB表示法自定义颜色UIColor
+- Navigation Bar与TableViewController的结合
+- 设置cell的高度tableView.rowHeight
+- 设置cell的大标题、小标题、图片
+- 使Table View的Controller界面跳转到另一个DetailViewController界面
+- 将Table View的row和section信息传递到DetailViewController界面
+
+### demo7_CollectionView
+
