@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5608210F1DDEA6D400039032 /* CityDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5608210E1DDEA6D400039032 /* CityDetailViewController.m */; };
 		56AFF3801DB71ABA00AE6DD5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 56AFF37F1DB71ABA00AE6DD5 /* main.m */; };
 		56AFF3831DB71ABA00AE6DD5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 56AFF3821DB71ABA00AE6DD5 /* AppDelegate.m */; };
 		56AFF3861DB71ABA00AE6DD5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56AFF3851DB71ABA00AE6DD5 /* ViewController.m */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5608210D1DDEA6D400039032 /* CityDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityDetailViewController.h; sourceTree = "<group>"; };
+		5608210E1DDEA6D400039032 /* CityDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityDetailViewController.m; sourceTree = "<group>"; };
 		56AFF37B1DB71ABA00AE6DD5 /* demo7_CollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demo7_CollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56AFF37F1DB71ABA00AE6DD5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		56AFF3811DB71ABA00AE6DD5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -63,6 +66,8 @@
 				56AFF3841DB71ABA00AE6DD5 /* ViewController.h */,
 				56AFF3851DB71ABA00AE6DD5 /* ViewController.m */,
 				56AFF3871DB71ABA00AE6DD5 /* Main.storyboard */,
+				5608210D1DDEA6D400039032 /* CityDetailViewController.h */,
+				5608210E1DDEA6D400039032 /* CityDetailViewController.m */,
 				56AFF38A1DB71ABA00AE6DD5 /* Assets.xcassets */,
 				56AFF38C1DB71ABA00AE6DD5 /* LaunchScreen.storyboard */,
 				56AFF38F1DB71ABA00AE6DD5 /* Info.plist */,
@@ -150,6 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5608210F1DDEA6D400039032 /* CityDetailViewController.m in Sources */,
 				56AFF3861DB71ABA00AE6DD5 /* ViewController.m in Sources */,
 				56AFF3831DB71ABA00AE6DD5 /* AppDelegate.m in Sources */,
 				56AFF3801DB71ABA00AE6DD5 /* main.m in Sources */,
@@ -307,6 +313,7 @@
 				56AFF3941DB71ABA00AE6DD5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "ImageCell.h"
+#import "CityDetailViewController.h"
 
 @interface ViewController ()
 
@@ -25,8 +27,30 @@
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionView *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"" forIndexPath:indexPath];
+   ImageCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ImageCell" forIndexPath:indexPath];
+    cell.imageView.image = [self imageOfCityWithId: indexPath.item];
+    return cell;
 }
+
+-(UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
+    return [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"citiesHeader" forIndexPath:indexPath];
+}
+
+#pragma mark -- Delegate --
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    [self performSegueWithIdentifier:@"showCity" sender:collectionView];
+}
+
+#pragma mark -- Navigation --
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if( [segue.identifier isEqualToString:@"showCity"] ) {
+        // current item => destination viewcontroller
+        UICollectionView *cv = (UICollectionView*)sender;
+        [cv indexPathsForSelectedItems];
+    }
+}
+
+#pragma mark -- View Controller Lifecycle --
 
 - (void)viewDidLoad {
     [super viewDidLoad];
