@@ -48,8 +48,8 @@ class UsersTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        var data = dataArr[indexPath.row] as! NSManagedObject
-        var vc = storyboard?.instantiateViewController(withIdentifier: "UserContent") as! UserContentViewController
+        let data = dataArr[indexPath.row] as! NSManagedObject
+        let vc = storyboard?.instantiateViewController(withIdentifier: "UserContent") as! UserContentViewController
         vc.data = data
         present(vc, animated: true, completion: nil)
         
@@ -59,16 +59,16 @@ class UsersTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
 
         // Configure the cell...
-        var label = cell.viewWithTag(6) as! UILabel
-        var attribute1 = dataArr[indexPath.row].value(forKey: "attribute1")
-        var attribute2 = dataArr[indexPath.row].value(forKey: "attribute2")
+        let label = cell.viewWithTag(6) as! UILabel
+        let attribute1 = dataArr[indexPath.row].value(forKey: "attribute1")
+        let attribute2 = dataArr[indexPath.row].value(forKey: "attribute2")
         label.text =  "attribute1:\(attribute1), attribute2:\(attribute2)"
         
         return cell
     }
     
     func refreshData() {
-        var f = NSFetchRequest<NSFetchRequestResult>(entityName: "Users")
+        let f = NSFetchRequest<NSFetchRequestResult>(entityName: "Users")
         try! dataArr = context.fetch(f)
         
         tableView.reloadData()
