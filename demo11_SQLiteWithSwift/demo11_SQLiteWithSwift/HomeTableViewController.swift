@@ -1,18 +1,17 @@
 //
-//  UsersTableViewController.swift
-//  demo8_CoreData
+//  HomeTableViewController.swift
+//  demo11_SQLiteWithSwift
 //
-//  Created by ChenXin on 2016/11/22.
+//  Created by ChenXin on 2016/12/2.
 //  Copyright © 2016年 ChenXin. All rights reserved.
 //
 
 import UIKit
-import CoreData
 
-class UsersTableViewController: UITableViewController {
+class HomeTableViewController: UITableViewController {
     
-    var dataArr:Array<AnyObject> = []
-    var context:NSManagedObjectContext!
+    // 数据源
+    var stuArr:Array<AnyObject> = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,10 +21,6 @@ class UsersTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        
-        context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        
-        refreshData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,45 +37,24 @@ class UsersTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return dataArr.count
-        
-        
+        return stuArr.count
     }
 
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let data = dataArr[indexPath.row] as! NSManagedObject
-        let vc = storyboard?.instantiateViewController(withIdentifier: "UserContent") as! UserContentViewController
-        vc.data = data
-        present(vc, animated: true, completion: nil)
-        
-    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
 
-        // Configure the cell...
-        let label = cell.viewWithTag(6) as! UILabel
-        let attribute1 = dataArr[indexPath.row].value(forKey: "attribute1")
-        let attribute2 = dataArr[indexPath.row].value(forKey: "attribute2")
-        label.text =  "attribute1:\(attribute1), attribute2:\(attribute2)"
-        
+        // 给cell赋值
+        if (self.stuArr.count > 0) {
+            //创建一个StudentModel类型的model对象，并且给model对象赋值为数据源的当前行下标的值数据
+            var model:StudentModel = stuArr[indexPath.row] as! StudentModel
+            //cell的大标题和副标题分别赋值为model的idNum和stuName属性
+            cell.textLabel?.text = model.idNum
+            cell.detailTextLabel?.text = model.stuName
+        }
         return cell
     }
     
-    
-    
-    
-
-    func refreshData() {
-        let f = NSFetchRequest<NSFetchRequestResult>(entityName: "Users")
-        try! dataArr = context.fetch(f)
-        
-        tableView.reloadData()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        refreshData()
-    }
 
     
     // Override to support conditional editing of the table view.
@@ -95,11 +69,7 @@ class UsersTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
-            
-            context.delete(dataArr[indexPath.row] as! NSManagedObject)
-            try! context.save()
-            
-            refreshData()
+            tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
