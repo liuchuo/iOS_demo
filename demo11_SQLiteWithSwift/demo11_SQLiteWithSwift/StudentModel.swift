@@ -6,9 +6,18 @@
 //  Copyright © 2016年 ChenXin. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class StudentModel: NSObject {
-    var idNum: String = ""
-    var stuName:String = ""
+    var idNum : String = ""
+    var stuName : String = ""
+    
+    init(idNum : String, stuName : String) {
+            self.idNum = idNum
+            self.stuName = stuName
+    }
+    
+    override init() {
+        super.init()
+    }
 }

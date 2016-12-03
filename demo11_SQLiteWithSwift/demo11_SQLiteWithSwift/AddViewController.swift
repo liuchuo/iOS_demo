@@ -26,7 +26,13 @@ class AddViewController: UIViewController {
     
     @IBAction func doneBtn(_ sender: Any) {
         // 写入数据库的操作代码
-    
+        let idNumText : String = idNum.text!
+        let stuNameText : String = stuName.text!
+        let insertSQL = "INSERT INTO 't_Student' (stuNum, stuName) VALUES ('\(idNumText)', '\(stuNameText)');"
+        if SQLManager.shareInstance().execSQL(SQL: insertSQL) == true {
+            print("插入数据add成功")
+        }
+        
     }
 
     /*
