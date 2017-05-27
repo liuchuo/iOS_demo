@@ -26,15 +26,20 @@
 
 //an example for header view
 
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 100; // 要调用- (nullable UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section; 必须重写该方法
+}
+
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     UIView * header = [[UIView alloc] init];
     header.backgroundColor = [UIColor colorWithRed:245.0/255.0 green:212.0/255.0 blue:217.0/255.0 alpha:1.0];
     return header;
+    // 建议使用UITableViewHeaderFooterView替代UIView,使用方法参照UITableViewCell,改变背景颜色调用 实例.contentView.backgroundColor = [UIColor colorWithRed:245.0/255.0 green:212.0/255.0 blue:217.0/255.0 alpha:1.0];
 }
 
-- (nullable NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return @" ";
-}
+//- (nullable NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+//    return @" ";
+//}
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
