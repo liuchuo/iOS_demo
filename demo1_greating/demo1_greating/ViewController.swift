@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        // 设置App的launch加载时间为1秒
         Thread.sleep(forTimeInterval: 1.0)
     }
 
