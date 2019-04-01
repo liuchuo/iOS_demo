@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- XML声明 -->
+<!-- XML根元素 -->
+<note>
+    <!-- XML子元素 -->
+    <to>Jam</to>
+    <from>Jane</from>
+    <heading lang="en">title</heading>
+    <body>Do not forget me</body>
+</note>
